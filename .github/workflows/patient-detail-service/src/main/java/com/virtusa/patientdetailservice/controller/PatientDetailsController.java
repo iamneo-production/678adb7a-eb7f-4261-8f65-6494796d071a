@@ -26,7 +26,7 @@ public class PatientDetailsController {
     @GetMapping("/getPatientDetailsById/{id}")
     private PatientDetails getPatientDetailsById(@PathVariable("id") int patientId)
     {
-         
+         System.out.println("hii");
         return patientDetailService.getPatientDetailsById(patientId);
     }
     
