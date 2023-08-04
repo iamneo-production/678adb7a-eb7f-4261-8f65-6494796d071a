@@ -13,12 +13,12 @@ public class PatientDetailService {
     @Autowired
     private PatientDetailsRepo patientDetailsRepo;
 
-    private PatientDetails savePatientDetails(PatientDetails details)
+    public PatientDetails savePatientDetails(PatientDetails details)
     {
         return patientDetailsRepo.save(details);
     }
 
-    private PatientDetails getPatientDetailsById(int patientId)
+    public PatientDetails getPatientDetailsById(int patientId)
     {
         return patientDetailsRepo.getById(patientId);
     }
