@@ -16,7 +16,6 @@ private PatientDetailsRepo patientDetailsRepo;
 
 public PatientDetails savePatientDetails(PatientDetails details)
 {
-System.out.println("-------------"+details.toString());
 return patientDetailsRepo.save(details);
 }
 

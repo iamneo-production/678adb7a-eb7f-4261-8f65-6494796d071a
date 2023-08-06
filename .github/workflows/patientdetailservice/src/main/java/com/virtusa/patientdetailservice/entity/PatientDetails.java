@@ -20,6 +20,7 @@ private String fullName;
 private long phoneNo;
 private String email;
 private String address;
+private int healthProviderID;
 
 public int getHealthProviderID() {
 return healthProviderID;
@@ -29,7 +30,7 @@ public void setHealthProviderID(int healthProviderID) {
 this.healthProviderID = healthProviderID;
 }
 
-private int healthProviderID;
+
 
 public int getPatientId() {
 return patientId;

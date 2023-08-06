@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class HealthCareProviders {
 
     @Id
-    @GeneratedValue
+    //@GeneratedValue
     private int healthCareID;
     private String email;
     private long phoneNo;

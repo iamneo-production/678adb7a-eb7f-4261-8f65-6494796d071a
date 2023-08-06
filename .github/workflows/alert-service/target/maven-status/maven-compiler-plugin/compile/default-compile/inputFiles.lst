@@ -1,7 +1,7 @@
 /home/coder/project/workspace/.github/workflows/alert-service/src/main/java/com/virtusa/alertservice/repository/HealthCareProviderRepo.java
 /home/coder/project/workspace/.github/workflows/alert-service/src/main/java/com/virtusa/alertservice/feingnclient/PatientDetailsFeignclient.java
-/home/coder/project/workspace/.github/workflows/alert-service/src/main/java/com/virtusa/alertservice/response/PatientDetailsResponse.java
 /home/coder/project/workspace/.github/workflows/alert-service/src/main/java/com/virtusa/alertservice/controller/AlertController.java
 /home/coder/project/workspace/.github/workflows/alert-service/src/main/java/com/virtusa/alertservice/service/AlertService.java
 /home/coder/project/workspace/.github/workflows/alert-service/src/main/java/com/virtusa/alertservice/AlertServiceApplication.java
 /home/coder/project/workspace/.github/workflows/alert-service/src/main/java/com/virtusa/alertservice/entity/HealthCareProviders.java
+/home/coder/project/workspace/.github/workflows/alert-service/src/main/java/com/virtusa/alertservice/response/PatientDetails.java

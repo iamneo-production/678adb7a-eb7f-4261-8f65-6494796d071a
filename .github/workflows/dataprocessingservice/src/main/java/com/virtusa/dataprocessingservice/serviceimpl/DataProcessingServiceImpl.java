@@ -9,6 +9,7 @@ import com.virtusa.dataprocessingservice.entity.DataManual;
 import com.virtusa.dataprocessingservice.exception.ParamsNotFoundException;
 import com.virtusa.dataprocessingservice.repo.DataProcessingRepo;
 import com.virtusa.dataprocessingservice.service.DataProcessingService;
+import com.virtusa.dataprocessingservice.externalservice.AlertServiceFeignclient;
 
 @Service
 public class DataProcessingServiceImpl implements DataProcessingService{
@@ -16,28 +17,36 @@ public class DataProcessingServiceImpl implements DataProcessingService{
 	@Autowired
 	DataProcessingRepo dataprocessingrepo;
 
+	@Autowired
+	AlertServiceFeignclient alertservicefeignclient;
+
 	@Override
 	public DataManual addToManual(DataManual datamanual) {
 		return dataprocessingrepo.save(datamanual);
 	}
 
 	@Override
-	public String dataProcessing(DeviceData devicedata) throws ParamsNotFoundException{
+	public void dataProcessing(DeviceData devicedata) throws ParamsNotFoundException{
 		try {
 			devicedata.getParams();
 		for(Params obj:devicedata.getParams())
 		{
 			DataManual datamanual=dataprocessingrepo.findByParamName(obj.getName());
-			if(obj.getValue()<datamanual.getMinimum() || obj.getValue()>datamanual.getMaximum())
+			System.out.println(datamanual.getMaximum()+"naveen"+datamanual.getMinimum());
+			System.out.println(obj.getValue());
+			if(obj.getValue()<(int)(datamanual.getMinimum()) ||obj.getValue()>(int)(datamanual.getMaximum()))
 			{
-				return "Abnormal";
+				System.out.println("entered");
+				alertservicefeignclient.alertFromHealthCareService(devicedata.getPatientId());
+				System.out.println("hii");
+				break;
 			}
 		}
 		}
+		//catch all exceptions
 		catch(RuntimeException e) {
 			throw new ParamsNotFoundException("Required Params not Found");
 		}
-		return "Normal";
 	}
 }
 

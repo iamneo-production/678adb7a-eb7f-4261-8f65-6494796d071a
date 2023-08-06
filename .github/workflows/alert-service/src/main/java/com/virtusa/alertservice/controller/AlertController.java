@@ -29,9 +29,10 @@ public class AlertController {
     @ResponseStatus(HttpStatus.CONFLICT)
     @CircuitBreaker(name ="alert",fallbackMethod = "circuitAlertFromHealthCareService")
     @Retry(name = "alert")
-    public String alertFromHealthCareService( @PathVariable("patientID") int providerID)
+    public String alertFromHealthCareService( @PathVariable("patientID") int patientID)
     {
-        return alertService.alertFromHealthCareService(providerID);
+        System.out.println("entered alert service");
+        return alertService.alertFromHealthCareService(patientID);
 
     }
 

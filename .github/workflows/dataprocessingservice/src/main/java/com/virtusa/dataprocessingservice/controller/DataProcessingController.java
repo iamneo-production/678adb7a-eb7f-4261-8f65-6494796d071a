@@ -23,9 +23,10 @@ public class DataProcessingController {
 	}
 	
 	@PostMapping("/data-processing")
-	public String dataProcessing(@RequestBody DeviceData devicedata)
+	public void dataProcessing(@RequestBody DeviceData devicedata)
 	{
-		return dataprocessingservice.dataProcessing(devicedata);
+		System.out.println("enterd dataprocessing service");
+		dataprocessingservice.dataProcessing(devicedata);
 	}
 
 }

@@ -5,5 +5,5 @@ import com.virtusa.dataprocessingservice.entity.DataManual;
 
 public interface DataProcessingService {
 	public DataManual addToManual(DataManual datamanual);
-	public String dataProcessing(DeviceData device);
+	public void dataProcessing(DeviceData device);
 }

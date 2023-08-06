@@ -20,7 +20,7 @@ public class DeviceController {
 	DeviceService deviceservice;
 	
 	@Autowired
-	DataProcessingService dataprocessingservice;
+	DataProcessingService dataProcessingService;
 	
 	@PostMapping("/addDevice")
 	public Device addDevice(@RequestBody Device device)
@@ -32,7 +32,7 @@ public class DeviceController {
 	@PostMapping("/device-gateway")
 	public String sendData(@RequestBody DeviceData devicedata)
 	{
-		return dataprocessingservice.dataProcessing(devicedata);
+		return dataProcessingService.dataProcessing(devicedata);
 	}
 	
 	public String getClientFallBack(Exception e) {
