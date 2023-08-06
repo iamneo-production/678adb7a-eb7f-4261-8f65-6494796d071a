@@ -1,0 +1,37 @@
+spring:
+ cloud:
+   gateway:
+     routes:
+       - id: DATA-PROCESSING-SERVICE
+         uri: lb://DATA-PROCESSING-SERVICE
+         predicates:
+           - Path=/api/data/**
+
+       - id: ALERT-SERVICE
+         uri: lb://ALERT-SERVICE
+         predicates:
+           - Path=/api/alertAPI/**
+
+       - id: PATIENT-DETAIL-SERVICE
+         uri: lb://PATIENT-DETAIL-SERVICE
+         predicates:
+           - Path=/api/patientDetailAPI/**
+      
+       - id: DEVICE-GATEWAY-SERVICE
+         uri: lb://DEVICE-GATEWAY-SERVICE
+         predicates:
+           - Path=/api/device/**
+
+
+       - id: NOTIFICATION-SERVICE
+         uri: lb://NOTIFICATION-SERVICE
+         predicates:
+           - Path=/api/notificationAPI/**
+
+ application:
+   name: API-GATEWAY
+
+eureka:
+  client:
+    service-url:
+      defaultZone : http://localhost:8761/eureka/
