@@ -1,4 +1,4 @@
-package com.virtusa.patientdetailservice;
+package com.virtusa.alertservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,12 +6,12 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignClients
 @EnableDiscoveryClient
-public class PatientDetailServiceApplication {
+@EnableFeignClients
+public class AlertServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PatientDetailServiceApplication.class, args);
+		SpringApplication.run(AlertServiceApplication.class, args);
 	}
 
 }

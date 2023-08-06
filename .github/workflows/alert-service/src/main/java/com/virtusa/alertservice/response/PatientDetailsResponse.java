@@ -1,21 +1,12 @@
-package com.virtusa.patientdetailservice.entity;
+package com.virtusa.alertservice.response;
 
-import java.lang.annotation.Inherited;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
 import lombok.Data;
 import lombok.NoArgsConstructor;
  
-
-@Entity
 @Data
 @NoArgsConstructor
-public class PatientDetails {
+public class PatientDetailsResponse {
 
-    @Id
-    @GeneratedValue
     private int patientId;
     private String username;
     private String password;
@@ -24,5 +15,6 @@ public class PatientDetails {
     private String email;
     private String address;
     private int healthProviderID;
+
     
 }

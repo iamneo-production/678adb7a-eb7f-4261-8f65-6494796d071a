@@ -1,32 +1,39 @@
 package com.virtusa.patientdetailservice.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.PathVariable;
-import com.virtusa.patientdetailservice.entity.PatientDetails;
-
-import com.virtusa.patientdetailservice.service.PatientDetailService;
+ import com.virtusa.patientdetailservice.entity.PatientDetails;
+ import com.virtusa.patientdetailservice.service.PatientDetailService;
+ import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
+ import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class PatientDetailsController {
+@RequestMapping("/patientDetailAPI")
+public class PatientDetailsController  {
 
     @Autowired
-    private PatientDetailService patientDetailService;
+    private PatientDetailService patientDetailsService;
 
     @PostMapping("/savePatientDetails")
     private PatientDetails savePatientDetails( @RequestBody PatientDetails details)
     {
-        return patientDetailService.savePatientDetails(details);
+        return patientDetailsService.savePatientDetails(details);
     }
 
     @GetMapping("/getPatientDetailsById/{id}")
-    private PatientDetails getPatientDetailsById(@PathVariable("id") int patientId)
+    @ResponseStatus(HttpStatus.CONFLICT)
+    @CircuitBreaker(name ="patient",fallbackMethod = " ")
+     @Retry(name = "patient")
+    public PatientDetails circuitGetPatientDetailsById(@PathVariable("id") int patientId)
     {
-        return patientDetailService.getPatientDetailsById(patientId);
+        return patientDetailsService.getPatientDetailsById(patientId);
     }
-    
+
+    public PatientDetails getPatientDetailsById(@PathVariable("id") int patientId,RuntimeException runtimeException)
+    {
+        return  null;
+    }
+
+
 }
