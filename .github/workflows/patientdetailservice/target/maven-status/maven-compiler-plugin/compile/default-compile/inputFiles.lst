@@ -1,0 +1,5 @@
+/home/coder/project/workspace/.github/workflows/patientdetailservice/src/main/java/com/virtusa/patientdetailservice/repository/PatientDetailsRepo.java
+/home/coder/project/workspace/.github/workflows/patientdetailservice/src/main/java/com/virtusa/patientdetailservice/service/PatientDetailService.java
+/home/coder/project/workspace/.github/workflows/patientdetailservice/src/main/java/com/virtusa/patientdetailservice/PatientdetailserviceApplication.java
+/home/coder/project/workspace/.github/workflows/patientdetailservice/src/main/java/com/virtusa/patientdetailservice/entity/PatientDetails.java
+/home/coder/project/workspace/.github/workflows/patientdetailservice/src/main/java/com/virtusa/patientdetailservice/controller/PatientDetailsController.java

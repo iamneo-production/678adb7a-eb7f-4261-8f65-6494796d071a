@@ -1,0 +1,9 @@
+com/virtusa/devicegatewayservice/DevicegatewayserviceApplication.class
+com/virtusa/devicegatewayservice/dto/DeviceData.class
+com/virtusa/devicegatewayservice/service/DeviceService.class
+com/virtusa/devicegatewayservice/serviceimpl/DeviceServiceImpl.class
+com/virtusa/devicegatewayservice/dto/Params.class
+com/virtusa/devicegatewayservice/repo/DeviceRepo.class
+com/virtusa/devicegatewayservice/controller/DeviceController.class
+com/virtusa/devicegatewayservice/entity/Device.class
+com/virtusa/devicegatewayservice/externalservice/DataProcessingService.class

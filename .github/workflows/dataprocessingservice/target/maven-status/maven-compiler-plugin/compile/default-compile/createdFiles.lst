@@ -1,0 +1,14 @@
+com/virtusa/dataprocessingservice/DataprocessingserviceApplication.class
+com/virtusa/dataprocessingservice/dto/Params.class
+com/virtusa/dataprocessingservice/repo/DataProcessingRepo.class
+com/virtusa/dataprocessingservice/exception/DataProcessException.class
+com/virtusa/dataprocessingservice/service/DataProcessingService.class
+com/virtusa/dataprocessingservice/serviceImpl/DataProcessingServiceImpl.class
+com/virtusa/dataprocessingservice/controller/DataProcessingController.class
+com/virtusa/dataprocessingservice/externalservice/DeviceFeignClient.class
+com/virtusa/dataprocessingservice/exception/GlobalException.class
+com/virtusa/dataprocessingservice/dto/DeviceData.class
+com/virtusa/dataprocessingservice/externalservice/NotificationFeignClient.class
+com/virtusa/dataprocessingservice/dto/Device.class
+com/virtusa/dataprocessingservice/entity/DataManual.class
+com/virtusa/dataprocessingservice/externalservice/AlertServiceFeignclient.class

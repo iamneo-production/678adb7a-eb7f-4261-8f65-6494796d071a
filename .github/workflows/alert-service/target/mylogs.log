@@ -1,0 +1,128 @@
+2023-08-06T16:02:48.025Z  INFO 21423 --- [main] c.v.a.AlertServiceApplication            : Starting AlertServiceApplication v0.0.1-SNAPSHOT using Java 17.0.7 with PID 21423 (/home/coder/project/workspace/.github/workflows/alert-service/target/alert-service-0.0.1-SNAPSHOT.jar started by coder in /home/coder/project/workspace/.github/workflows/alert-service/target)
+2023-08-06T16:02:48.030Z  INFO 21423 --- [main] c.v.a.AlertServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-06T16:02:51.203Z  INFO 21423 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-06T16:02:51.509Z  INFO 21423 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 285 ms. Found 1 JPA repository interfaces.
+2023-08-06T16:02:52.942Z  INFO 21423 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d01da1df-907a-3e8d-8e7a-347d9857dbf2
+2023-08-06T16:02:53.224Z  INFO 21423 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.virtusa.alertservice.feingnclient.PatientDetailsFeignclient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-06T16:02:54.476Z  INFO 21423 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9003 (http)
+2023-08-06T16:02:54.494Z  INFO 21423 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-06T16:02:54.495Z  INFO 21423 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-06T16:02:54.628Z  INFO 21423 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-06T16:02:54.629Z  INFO 21423 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6327 ms
+2023-08-06T16:02:55.799Z  INFO 21423 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-06T16:02:55.896Z  INFO 21423 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-06T16:02:55.901Z  INFO 21423 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-08-06T16:02:56.150Z  INFO 21423 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-06T16:02:56.395Z  INFO 21423 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-06T16:02:56.422Z  INFO 21423 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-06T16:02:56.733Z  INFO 21423 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30c0d731
+2023-08-06T16:02:56.739Z  INFO 21423 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-06T16:02:56.904Z  WARN 21423 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.6.51 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-08-06T16:02:57.702Z  INFO 21423 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-06T16:02:58.841Z  INFO 21423 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-06T16:02:58.917Z  INFO 21423 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-06T16:02:59.286Z  WARN 21423 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-06T16:02:59.605Z  INFO 21423 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'PATIENT-DETAIL-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2023-08-06T16:03:04.114Z  INFO 21423 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-08-06T16:03:04.331Z  WARN 21423 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-08-06T16:03:04.413Z  INFO 21423 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-06T16:03:04.525Z  INFO 21423 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-08-06T16:03:04.657Z  INFO 21423 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-08-06T16:03:04.680Z  INFO 21423 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T16:03:04.744Z  INFO 21423 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-08-06T16:03:04.745Z  INFO 21423 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-08-06T16:03:04.745Z  INFO 21423 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-08-06T16:03:04.746Z  INFO 21423 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-08-06T16:03:04.746Z  INFO 21423 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-08-06T16:03:04.747Z  INFO 21423 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-08-06T16:03:04.747Z  INFO 21423 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-08-06T16:03:06.024Z  INFO 21423 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-08-06T16:03:06.029Z  INFO 21423 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-08-06T16:03:06.035Z  INFO 21423 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-08-06T16:03:06.083Z  INFO 21423 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1691337786081 with initial instances count: 3
+2023-08-06T16:03:06.105Z  INFO 21423 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALERT-SERVICE with eureka with status UP
+2023-08-06T16:03:06.106Z  INFO 21423 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1691337786106, current=UP, previous=STARTING]
+2023-08-06T16:03:06.109Z  INFO 21423 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALERT-SERVICE/aaeffbabdfaefdeefeaaaacbddfeacdbb-0.aaeffbabdfaefdeefeaaaacbddfeacdbb.che.svc.cluster.local:ALERT-SERVICE:9003: registering service...
+2023-08-06T16:03:06.179Z  INFO 21423 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9003 (http) with context path ''
+2023-08-06T16:03:06.182Z  INFO 21423 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9003
+2023-08-06T16:03:06.222Z  INFO 21423 --- [main] c.v.a.AlertServiceApplication            : Started AlertServiceApplication in 19.815 seconds (process running for 21.375)
+2023-08-06T16:03:06.276Z  INFO 21423 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALERT-SERVICE/aaeffbabdfaefdeefeaaaacbddfeacdbb-0.aaeffbabdfaefdeefeaaaacbddfeacdbb.che.svc.cluster.local:ALERT-SERVICE:9003 - registration status: 204
+2023-08-06T16:08:04.752Z  INFO 21423 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T16:13:04.753Z  INFO 21423 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T16:18:04.776Z  INFO 21423 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T16:23:04.778Z  INFO 21423 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T16:28:04.808Z  INFO 21423 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T16:33:04.832Z  INFO 21423 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T16:38:04.833Z  INFO 21423 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T16:43:04.835Z  INFO 21423 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T16:48:04.836Z  INFO 21423 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T16:53:04.845Z  INFO 21423 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T16:58:04.855Z  INFO 21423 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T17:03:04.876Z  INFO 21423 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T17:08:04.906Z  INFO 21423 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T17:13:04.916Z  INFO 21423 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T17:18:04.975Z  INFO 21423 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T17:23:04.992Z  INFO 21423 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T17:23:19.375Z  INFO 21423 --- [http-nio-9003-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-06T17:23:19.377Z  INFO 21423 --- [http-nio-9003-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-06T17:23:19.384Z  INFO 21423 --- [http-nio-9003-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-08-06T17:23:54.521Z  INFO 70378 --- [main] c.v.a.AlertServiceApplication            : Starting AlertServiceApplication v0.0.1-SNAPSHOT using Java 17.0.7 with PID 70378 (/home/coder/project/workspace/.github/workflows/alert-service/target/alert-service-0.0.1-SNAPSHOT.jar started by coder in /home/coder/project/workspace/.github/workflows/alert-service/target)
+2023-08-06T17:23:54.561Z  INFO 70378 --- [main] c.v.a.AlertServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-06T17:23:58.552Z  INFO 70378 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-06T17:23:58.941Z  INFO 70378 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 352 ms. Found 1 JPA repository interfaces.
+2023-08-06T17:23:59.928Z  INFO 70378 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d01da1df-907a-3e8d-8e7a-347d9857dbf2
+2023-08-06T17:24:00.199Z  INFO 70378 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.virtusa.alertservice.feingnclient.PatientDetailsFeignclient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-06T17:24:02.176Z  INFO 70378 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9003 (http)
+2023-08-06T17:24:02.198Z  INFO 70378 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-06T17:24:02.199Z  INFO 70378 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-06T17:24:02.346Z  INFO 70378 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-06T17:24:02.347Z  INFO 70378 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7612 ms
+2023-08-06T17:24:03.649Z  INFO 70378 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-06T17:24:03.880Z  INFO 70378 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-06T17:24:03.886Z  INFO 70378 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-08-06T17:24:04.244Z  INFO 70378 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-06T17:24:04.598Z  INFO 70378 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-06T17:24:04.637Z  INFO 70378 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-06T17:24:05.289Z  INFO 70378 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30669dac
+2023-08-06T17:24:05.296Z  INFO 70378 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-06T17:24:05.503Z  WARN 70378 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.6.51 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-08-06T17:24:05.906Z  INFO 70378 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-06T17:24:07.364Z  INFO 70378 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-06T17:24:07.461Z  INFO 70378 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-06T17:24:07.885Z  WARN 70378 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-06T17:24:08.119Z  INFO 70378 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'PATIENT-DETAIL-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2023-08-06T17:24:11.980Z  INFO 70378 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-08-06T17:24:12.284Z  WARN 70378 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-08-06T17:24:12.336Z  INFO 70378 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-06T17:24:12.513Z  INFO 70378 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-08-06T17:24:12.731Z  INFO 70378 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-08-06T17:24:12.747Z  INFO 70378 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T17:24:12.807Z  INFO 70378 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-08-06T17:24:12.808Z  INFO 70378 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-08-06T17:24:12.809Z  INFO 70378 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-08-06T17:24:12.810Z  INFO 70378 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-08-06T17:24:12.810Z  INFO 70378 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-08-06T17:24:12.810Z  INFO 70378 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-08-06T17:24:12.811Z  INFO 70378 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-08-06T17:24:13.768Z  INFO 70378 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-08-06T17:24:13.784Z  INFO 70378 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-08-06T17:24:13.790Z  INFO 70378 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-08-06T17:24:13.803Z  INFO 70378 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1691342653801 with initial instances count: 6
+2023-08-06T17:24:13.833Z  INFO 70378 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALERT-SERVICE with eureka with status UP
+2023-08-06T17:24:13.834Z  INFO 70378 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1691342653834, current=UP, previous=STARTING]
+2023-08-06T17:24:13.839Z  INFO 70378 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALERT-SERVICE/aaeffbabdfaefdeefeaaaacbddfeacdbb-0.aaeffbabdfaefdeefeaaaacbddfeacdbb.che.svc.cluster.local:ALERT-SERVICE:9003: registering service...
+2023-08-06T17:24:13.909Z  INFO 70378 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9003 (http) with context path ''
+2023-08-06T17:24:13.912Z  INFO 70378 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9003
+2023-08-06T17:24:13.989Z  INFO 70378 --- [main] c.v.a.AlertServiceApplication            : Started AlertServiceApplication in 20.939 seconds (process running for 23.412)
+2023-08-06T17:24:14.009Z  INFO 70378 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALERT-SERVICE/aaeffbabdfaefdeefeaaaacbddfeacdbb-0.aaeffbabdfaefdeefeaaaacbddfeacdbb.che.svc.cluster.local:ALERT-SERVICE:9003 - registration status: 204
+2023-08-06T17:24:23.503Z  INFO 70378 --- [http-nio-9003-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-06T17:24:23.504Z  INFO 70378 --- [http-nio-9003-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-06T17:24:23.508Z  INFO 70378 --- [http-nio-9003-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-08-06T17:24:24.110Z  INFO 70378 --- [http-nio-9003-exec-3] c.v.alertservice.service.AlertService    : health care provider
+2023-08-06T17:24:24.112Z  INFO 70378 --- [http-nio-9003-exec-3] c.v.alertservice.service.AlertService    : Phone number : 8123456789 ==>sms is sent health provider regarding your health condition based on details 
+2023-08-06T17:24:24.112Z  INFO 70378 --- [http-nio-9003-exec-3] c.v.alertservice.service.AlertService    : -----------------------------------------------------------------
+2023-08-06T17:24:24.118Z  INFO 70378 --- [http-nio-9003-exec-3] c.v.alertservice.service.AlertService    : To : healthcare1@gmail.com
+2023-08-06T17:24:24.118Z  INFO 70378 --- [http-nio-9003-exec-3] c.v.alertservice.service.AlertService    : Subject : abnormal condition for the patient with the id - 1
+2023-08-06T17:24:24.118Z  INFO 70378 --- [http-nio-9003-exec-3] c.v.alertservice.service.AlertService    : Body : please look in to above patient he is in abnormal condition
+2023-08-06T17:29:12.815Z  INFO 70378 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-08-06T17:34:12.817Z  INFO 70378 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

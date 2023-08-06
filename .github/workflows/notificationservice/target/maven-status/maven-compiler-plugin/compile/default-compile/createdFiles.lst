@@ -1,0 +1,7 @@
+com/virtusa/notificationservice/response/PatientDetails.class
+com/virtusa/notificationservice/NotificationserviceApplication.class
+com/virtusa/notificationservice/feingnclient/HealthCareProviderFeignClient.class
+com/virtusa/notificationservice/feingnclient/PatientDetailsFeignclient.class
+com/virtusa/notificationservice/response/HealthCareProviders.class
+com/virtusa/notificationservice/controller/NotificationsController.class
+com/virtusa/notificationservice/service/NotificationService.class

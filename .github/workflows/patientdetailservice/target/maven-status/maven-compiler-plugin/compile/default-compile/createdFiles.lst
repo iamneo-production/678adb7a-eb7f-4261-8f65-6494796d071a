@@ -1,0 +1,5 @@
+com/virtusa/patientdetailservice/entity/PatientDetails.class
+com/virtusa/patientdetailservice/controller/PatientDetailsController.class
+com/virtusa/patientdetailservice/service/PatientDetailService.class
+com/virtusa/patientdetailservice/PatientdetailserviceApplication.class
+com/virtusa/patientdetailservice/repository/PatientDetailsRepo.class

@@ -1,0 +1,9 @@
+/home/coder/project/workspace/.github/workflows/devicegatewayservice/src/main/java/com/virtusa/devicegatewayservice/dto/Params.java
+/home/coder/project/workspace/.github/workflows/devicegatewayservice/src/main/java/com/virtusa/devicegatewayservice/dto/DeviceData.java
+/home/coder/project/workspace/.github/workflows/devicegatewayservice/src/main/java/com/virtusa/devicegatewayservice/externalservice/DataProcessingService.java
+/home/coder/project/workspace/.github/workflows/devicegatewayservice/src/main/java/com/virtusa/devicegatewayservice/entity/Device.java
+/home/coder/project/workspace/.github/workflows/devicegatewayservice/src/main/java/com/virtusa/devicegatewayservice/DevicegatewayserviceApplication.java
+/home/coder/project/workspace/.github/workflows/devicegatewayservice/src/main/java/com/virtusa/devicegatewayservice/service/DeviceService.java
+/home/coder/project/workspace/.github/workflows/devicegatewayservice/src/main/java/com/virtusa/devicegatewayservice/repo/DeviceRepo.java
+/home/coder/project/workspace/.github/workflows/devicegatewayservice/src/main/java/com/virtusa/devicegatewayservice/controller/DeviceController.java
+/home/coder/project/workspace/.github/workflows/devicegatewayservice/src/main/java/com/virtusa/devicegatewayservice/serviceimpl/DeviceServiceImpl.java
