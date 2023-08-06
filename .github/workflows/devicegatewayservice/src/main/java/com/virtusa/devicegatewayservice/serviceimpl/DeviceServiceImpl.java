@@ -4,16 +4,22 @@ import org.springframework.stereotype.Service;
 import com.virtusa.devicegatewayservice.entity.Device;
 import com.virtusa.devicegatewayservice.repo.DeviceRepo;
 import com.virtusa.devicegatewayservice.service.DeviceService;
-
+import java.util.Optional;
 @Service
 public class DeviceServiceImpl implements DeviceService{
 	
 	@Autowired
-	DeviceRepo devicerepo;
+	DeviceRepo deviceRepo;
 
 	@Override
 	public Device addDevice(Device device) {
-		return devicerepo.save(device);
+		return deviceRepo.save(device);
+	}
+
+	@Override
+	public Optional<Device> findById(int id)
+	{
+		return deviceRepo.findById(id);
 	}
 
 }

@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.GetMapping;
 import com.virtusa.devicegatewayservice.entity.Device;
 import com.virtusa.devicegatewayservice.dto.DeviceData;
 import com.virtusa.devicegatewayservice.externalservice.DataProcessingService;
@@ -39,6 +40,12 @@ public class DeviceController {
 	public void sendData(@RequestBody DeviceData devicedata)
 	{
 		dataProcessingService.dataProcessing(devicedata);
+	}
+
+	@GetMapping("/getById/{id}")
+	public Device getById(@PathVariable("id") int id)
+	{
+		return deviceService.findById(id).get();
 	}
 	
 	public void getClientFallBack(Exception e) {

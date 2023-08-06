@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.virtusa.devicegatewayservice.dto.DeviceData;
+import com.virtusa.devicegatewayservice.entity.Device;
 
 @FeignClient(name="DATA-PROCESSING-SERVICE",path = "/api/data")
 public interface DataProcessingService {
