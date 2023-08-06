@@ -1,7 +1,7 @@
 com/virtusa/alertservice/entity/HealthCareProviders.class
 com/virtusa/alertservice/feingnclient/PatientDetailsFeignclient.class
-com/virtusa/alertservice/controller/AlertController.class
 com/virtusa/alertservice/service/AlertService.class
+com/virtusa/alertservice/controller/AlertController.class
 com/virtusa/alertservice/response/PatientDetailsResponse.class
 com/virtusa/alertservice/AlertServiceApplication.class
 com/virtusa/alertservice/repository/HealthCareProviderRepo.class
