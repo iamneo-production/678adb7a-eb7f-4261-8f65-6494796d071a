@@ -9,7 +9,7 @@ import com.virtusa.devicegatewayservice.dto.DeviceData;
 public interface DataProcessingService {
 	
 	
-	@PostMapping("/dataManual/dataProcessing")
+	@PostMapping("/data-processing")
 	public String dataProcessing(@RequestBody DeviceData devicedata);
 	
 

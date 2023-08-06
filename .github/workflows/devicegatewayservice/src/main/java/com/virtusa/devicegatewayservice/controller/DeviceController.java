@@ -14,7 +14,6 @@ import com.virtusa.devicegatewayservice.service.DeviceService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 
 @RestController
-@RequestMapping("/device")
 public class DeviceController {
 	
 	@Autowired
@@ -24,13 +23,13 @@ public class DeviceController {
 	DataProcessingService dataprocessingservice;
 	
 	@PostMapping("/addDevice")
-	public String addDevice(@RequestBody Device device)
+	public Device addDevice(@RequestBody Device device)
 	{
 		return deviceservice.addDevice(device);
 	}
 	
 	@CircuitBreaker(name="clientBreaker",fallbackMethod = "getClientFallBack")
-	@PostMapping("/sendData")
+	@PostMapping("/device-gateway")
 	public String sendData(@RequestBody DeviceData devicedata)
 	{
 		return dataprocessingservice.dataProcessing(devicedata);

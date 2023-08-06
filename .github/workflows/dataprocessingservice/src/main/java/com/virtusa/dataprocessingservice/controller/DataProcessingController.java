@@ -11,19 +11,18 @@ import com.virtusa.dataprocessingservice.entity.DataManual;
 import com.virtusa.dataprocessingservice.service.DataProcessingService;
 
 @RestController
-@RequestMapping("/dataManual")
 public class DataProcessingController {
 	
 	@Autowired
 	DataProcessingService dataprocessingservice;
 	
 	@PostMapping("/addtoManual")
-	public String addToManual(@RequestBody DataManual datamanual)
+	public DataManual addToManual(@RequestBody DataManual datamanual)
 	{
 		return dataprocessingservice.addToManual(datamanual);
 	}
 	
-	@PostMapping("/dataProcessing")
+	@PostMapping("/data-processing")
 	public String dataProcessing(@RequestBody DeviceData devicedata)
 	{
 		return dataprocessingservice.dataProcessing(devicedata);

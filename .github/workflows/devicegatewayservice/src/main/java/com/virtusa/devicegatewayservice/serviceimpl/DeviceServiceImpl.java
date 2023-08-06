@@ -12,9 +12,8 @@ public class DeviceServiceImpl implements DeviceService{
 	DeviceRepo devicerepo;
 
 	@Override
-	public String addDevice(Device device) {
-		devicerepo.save(device);
-		return "Device added";
+	public Device addDevice(Device device) {
+		return devicerepo.save(device);
 	}
 
 }

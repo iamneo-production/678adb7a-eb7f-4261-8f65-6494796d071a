@@ -17,9 +17,8 @@ public class DataProcessingServiceImpl implements DataProcessingService{
 	DataProcessingRepo dataprocessingrepo;
 
 	@Override
-	public String addToManual(DataManual datamanual) {
-		dataprocessingrepo.save(datamanual);
-		return "Added to data Manual";
+	public DataManual addToManual(DataManual datamanual) {
+		return dataprocessingrepo.save(datamanual);
 	}
 
 	@Override
