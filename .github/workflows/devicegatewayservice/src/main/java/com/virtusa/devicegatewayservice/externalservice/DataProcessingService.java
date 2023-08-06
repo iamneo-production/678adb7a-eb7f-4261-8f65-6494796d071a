@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.virtusa.devicegatewayservice.dto.DeviceData;
 
-@FeignClient(name="DATA-PROCESSING-SERVICE")
+@FeignClient(name="DATA-PROCESSING-SERVICE",path = "/api/data")
 public interface DataProcessingService {
 	
 	

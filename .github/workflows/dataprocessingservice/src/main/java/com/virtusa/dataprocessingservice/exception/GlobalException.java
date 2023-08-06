@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalException {
 
-	@ExceptionHandler(ParamsNotFoundException.class)
-	public String handleParamsNotFoundException(ParamsNotFoundException e) {
+	@ExceptionHandler(DataProcessException.class)
+	public String handleParamsNotFoundException(DataProcessException e) {
 		return e.getMessage();
 	}
 }

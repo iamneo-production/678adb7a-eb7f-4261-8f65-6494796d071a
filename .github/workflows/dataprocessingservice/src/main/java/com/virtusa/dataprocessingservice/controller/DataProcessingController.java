@@ -11,22 +11,22 @@ import com.virtusa.dataprocessingservice.entity.DataManual;
 import com.virtusa.dataprocessingservice.service.DataProcessingService;
 
 @RestController
+@RequestMapping("/api/data")
 public class DataProcessingController {
 	
 	@Autowired
-	DataProcessingService dataprocessingservice;
+	DataProcessingService dataProcessingService;
 	
 	@PostMapping("/addtoManual")
 	public DataManual addToManual(@RequestBody DataManual datamanual)
 	{
-		return dataprocessingservice.addToManual(datamanual);
+		return dataProcessingService.addToManual(datamanual);
 	}
 	
 	@PostMapping("/data-processing")
 	public void dataProcessing(@RequestBody DeviceData devicedata)
 	{
-		System.out.println("enterd dataprocessing service");
-		dataprocessingservice.dataProcessing(devicedata);
+		dataProcessingService.dataProcessing(devicedata);
 	}
 
 }

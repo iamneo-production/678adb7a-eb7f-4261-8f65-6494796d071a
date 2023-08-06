@@ -1,5 +1,8 @@
 package com.virtusa.devicegatewayservice.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,10 +17,13 @@ import com.virtusa.devicegatewayservice.service.DeviceService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 
 @RestController
+@RequestMapping("/api/device")
 public class DeviceController {
+
+	private static final Logger logger = LoggerFactory.getLogger(DeviceController.class);
 	
 	@Autowired
-	DeviceService deviceservice;
+	DeviceService deviceService;
 	
 	@Autowired
 	DataProcessingService dataProcessingService;
@@ -25,18 +31,18 @@ public class DeviceController {
 	@PostMapping("/addDevice")
 	public Device addDevice(@RequestBody Device device)
 	{
-		return deviceservice.addDevice(device);
+		return deviceService.addDevice(device);
 	}
 	
 	@CircuitBreaker(name="clientBreaker",fallbackMethod = "getClientFallBack")
 	@PostMapping("/device-gateway")
-	public String sendData(@RequestBody DeviceData devicedata)
+	public void sendData(@RequestBody DeviceData devicedata)
 	{
-		return dataProcessingService.dataProcessing(devicedata);
+		dataProcessingService.dataProcessing(devicedata);
 	}
 	
-	public String getClientFallBack(Exception e) {
-        return "Default message";
+	public void getClientFallBack(Exception e) {
+		logger.info("data processing client is down");
    }
 }
 
